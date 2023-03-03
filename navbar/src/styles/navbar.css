@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#full-page{
+    width: 100%;
+    height: 100vh;
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+}
+#navbox{
+    width: 96%;
+    margin: auto;
+    border-radius: 30px;
+    background: rgb(118,118,121);
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+#navbox nav{
+    flex: 1;
+    text-align: right;
+}
+#navbox nav ul{
+    display: inline-block;
+}
+#navbox nav ul li{
+    list-style: none;
+    display: inline-block;
+}
+.navlink{
+    text-decoration: none;
+    color: white;
+    margin: 10px;
+    padding: 6px;
+}
+.nav-icon{
+    margin-right: 10px;
+}
+.navlink.nav-btn{
+    color: aquamarine;
+}
+.navlink:hover{
+    background-color: rgba(0, 255, 153, 0.7);
+}
+.navlink.nav-btn:hover{
+    background-color: rgba(217, 217, 217, 0.5);
+}
+.mobile-nav{
+    display: none;
+}
+
+
+@media screen and (max-width:800px) {
+    
+    #navbar{
+        /* border: 2px solid white; */
+        background: rgba(255, 255, 255, .25);
+        box-shadow: 0 8px 32px 0 rgba(31,38,135, .37);
+        /* backdrop-filter: blur(4px); */
+        border-radius: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        position: fixed;
+        top: 0;
+        left: 200%;
+        right: 2%;      
+    }
+    #navbar.active{
+        left: 2%;
+    }
+    #navbox nav ul li{
+        /* border: 2px solid red; */
+        width: 100%;
+        
+    }
+    .navlink{
+        display: block;
+        /* border: 2px solid red; */
+        width: 96%;
+        text-align: center;
+        margin-bottom: 10px;
+        padding: 15px;
+    }
+    .navlink.home{
+        margin-top: 17%;
+    }
+    .mobile-nav{
+        display: block;
+        font-size: 1.6rem;
+        z-index: 1;
+        cursor: pointer;
+    }
+    .navlink.nav-btn{
+        color: blue;
+        text-decoration: underline;
+    }
+    
+    
+}
